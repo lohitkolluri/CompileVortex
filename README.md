@@ -19,7 +19,7 @@ An online code compiler built using React, capable of compiling and running code
 1. Clone the repository:
 
    ```sh
-   git clone https://https://github.com/lohitkolluri/CompileVortex.git
+   git clone https://github.com/lohitkolluri/CompileVortex.git
    ```
 
 2. Install dependencies:
