@@ -87,14 +87,14 @@ function App() {
           </button>
         </div>
         <div className="right-container">
-          <h4>Input:</h4>
+          <h4>INPUT:</h4>
           <div className="input-box">
             <textarea
               id="code-inp"
               onChange={(e) => setUserInput(e.target.value)}
             ></textarea>
           </div>
-          <h4>Output:</h4>
+          <h4>OUTPUT:</h4>
           {loading ? (
             <div className="spinner-box">
               <img src={spinner} alt="Loading..." />
