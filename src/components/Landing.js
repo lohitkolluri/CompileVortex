@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState} from "react";
 import CodeEditorWindow from "./CodeEditorWindow";
 import axios from "axios";
 import { classnames } from "../utils/general";
@@ -15,6 +15,11 @@ import CustomInput from "./CustomInput";
 import OutputDetails from "./OutputDetails";
 import ThemeDropdown from "./ThemeDropdown";
 import LanguagesDropdown from "./LanguagesDropdown";
+
+const REACT_APP_RAPID_API_HOST = "judge0-ce.p.rapidapi.com";
+const REACT_APP_RAPID_API_KEY = "7f1c042376msh9627470c72af467p1f2a51jsn937d582defc1";
+const REACT_APP_RAPID_API_URL = "https://judge0-ce.p.rapidapi.com/abouts";
+
 
 const javascriptDefault = `/**
 * Welcome to CompileVortex
@@ -44,7 +49,7 @@ const Landing = () => {
       console.log("ctrlPress", ctrlPress);
       handleCompile();
     }
-  }, [ctrlPress, enterPress]);
+  });
   const onChange = (action, data) => {
     switch (action) {
       case "code": {
@@ -66,13 +71,13 @@ const Landing = () => {
     };
     const options = {
       method: "POST",
-      url: process.env.REACT_APP_RAPID_API_URL,
+      url: REACT_APP_RAPID_API_URL,
       params: { base64_encoded: "true", fields: "*" },
       headers: {
         "content-type": "application/json",
         "Content-Type": "application/json",
-        "X-RapidAPI-Host": process.env.REACT_APP_RAPID_API_HOST,
-        "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
+        "X-RapidAPI-Host": REACT_APP_RAPID_API_HOST,
+        "X-RapidAPI-Key": REACT_APP_RAPID_API_KEY,
       },
       data: formData,
     };
@@ -93,7 +98,7 @@ const Landing = () => {
           console.log("too many requests", status);
 
           showErrorToast(
-            `Quota of 100 requests exceeded for the Day! Please read the blog on freeCodeCamp to learn how to setup your own RAPID API Judge0!`,
+            `Quota of 100 requests exceeded for the Day!`,
             10000
           );
         }
@@ -105,11 +110,11 @@ const Landing = () => {
   const checkStatus = async (token) => {
     const options = {
       method: "GET",
-      url: process.env.REACT_APP_RAPID_API_URL + "/" + token,
+      url: REACT_APP_RAPID_API_URL + "/" + token,
       params: { base64_encoded: "true", fields: "*" },
       headers: {
-        "X-RapidAPI-Host": process.env.REACT_APP_RAPID_API_HOST,
-        "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
+        "X-RapidAPI-Host": REACT_APP_RAPID_API_HOST,
+        "X-RapidAPI-Key": REACT_APP_RAPID_API_KEY,
       },
     };
     try {
