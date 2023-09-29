@@ -16,10 +16,6 @@ import OutputDetails from "./OutputDetails";
 import ThemeDropdown from "./ThemeDropdown";
 import LanguagesDropdown from "./LanguagesDropdown";
 
-const REACT_APP_RAPID_API_HOST = "judge0-ce.p.rapidapi.com";
-const REACT_APP_RAPID_API_KEY = "7f1c042376msh9627470c72af467p1f2a51jsn937d582defc1";
-const REACT_APP_RAPID_API_URL = "https://judge0-ce.p.rapidapi.com/abouts";
-
 
 const javascriptDefault = `/**
 * Welcome to CompileVortex
@@ -71,13 +67,13 @@ const Landing = () => {
     };
     const options = {
       method: "POST",
-      url: REACT_APP_RAPID_API_URL,
+      url: process.env.REACT_APP_RAPID_API_URL,
       params: { base64_encoded: "true", fields: "*" },
       headers: {
         "content-type": "application/json",
         "Content-Type": "application/json",
-        "X-RapidAPI-Host": REACT_APP_RAPID_API_HOST,
-        "X-RapidAPI-Key": REACT_APP_RAPID_API_KEY,
+        "X-RapidAPI-Host": process.env.REACT_APP_RAPID_API_HOST,
+        "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
       },
       data: formData,
     };
@@ -110,11 +106,11 @@ const Landing = () => {
   const checkStatus = async (token) => {
     const options = {
       method: "GET",
-      url: REACT_APP_RAPID_API_URL + "/" + token,
+      url: process.env.REACT_APP_RAPID_API_URL + "/" + token,
       params: { base64_encoded: "true", fields: "*" },
       headers: {
-        "X-RapidAPI-Host": REACT_APP_RAPID_API_HOST,
-        "X-RapidAPI-Key": REACT_APP_RAPID_API_KEY,
+        "X-RapidAPI-Host": process.env.REACT_APP_RAPID_API_HOST,
+        "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
       },
     };
     try {
