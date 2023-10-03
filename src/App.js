@@ -1,4 +1,4 @@
-import "./App.css";
+import "./global.css";
 import Landing from "./components/Landing";
 
 function App() {
