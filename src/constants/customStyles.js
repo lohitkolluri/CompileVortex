@@ -8,47 +8,40 @@ export const customStyles = {
     color: "#C7C3BD",
     fontSize: "0.8rem",
     lineHeight: "1.75rem",
-    backgroundColor: "#181A1B",
+    backgroundColor: "#131516",
     cursor: "pointer",
-    border: "2px solid #C7C3BD",
-    boxShadow: "4x 4px 0px 0px #C7C3BD",
+    border: "2px solid #3D4143",
+    boxShadow: "4px 4px 0px 0px #C7C3BD",
     ":hover": {
-      border: "2px solid #8A8275",
+      border: "2px solid #3D4143",
       boxShadow: "none",
     },
   }),
-  option: (styles) => {
-    return {
-      ...styles,
-      color: "#C7C3BD",
-      fontSize: "0.8rem",
-      lineHeight: "1.75rem",
-      width: "100%",
-      background: "#181A1B",
-      ":hover": {
-        backgroundColor: "#C7C3BD",
-        color: "#000",
-        cursor: "pointer",
-      },
-    };
-  },
-  menu: (styles) => {
-    return {
-      ...styles,
+  option: (styles) => ({
+    ...styles,
+    color: "#C7C3BD",
+    fontSize: "0.8rem",
+    lineHeight: "1.75rem",
+    width: "100%",
+    background: "#181A1B",
+    ":hover": {
       backgroundColor: "#C7C3BD",
-      maxWidth: "14rem",
-      border: "2px solid #000000",
-      borderRadius: "5px",
-      boxShadow: "5px 5px 0px 0px rgba(0,0,0);",
-    };
-  },
-
-  placeholder: (defaultStyles) => {
-    return {
-      ...defaultStyles,
-      color: "#F3F4F6",
-      fontSize: "0.8rem",
-      lineHeight: "1.75rem",
-    };
-  },
+      color: "#000",
+      cursor: "pointer",
+    },
+  }),
+  menu: (styles) => ({
+    ...styles,
+    backgroundColor: "#C7C3BD",
+    maxWidth: "14rem",
+    border: "2px solid #3D4143",
+    borderRadius: "5px",
+    boxShadow: "5px 5px 0px 0px rgba(0, 0, 0, 0)",
+  }),
+  placeholder: (defaultStyles) => ({
+    ...defaultStyles,
+    color: "#F3F4F6",
+    fontSize: "0.8rem",
+    lineHeight: "1.75rem",
+  }),
 };
