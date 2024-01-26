@@ -1,6 +1,6 @@
 export const customStyles = {
-  control: (styles) => ({
-    ...styles,
+  control: (base, state) => ({
+    ...base,
     width: "100%",
     maxWidth: "14rem",
     minWidth: "12rem",
@@ -8,38 +8,38 @@ export const customStyles = {
     color: "#C7C3BD",
     fontSize: "0.8rem",
     lineHeight: "1.75rem",
-    backgroundColor: "#131516",
+    backgroundColor: "#262626", 
     cursor: "pointer",
-    border: "2px solid #3D4143",
-    boxShadow: "4px 4px 0px 0px #C7C3BD",
+    border: `2px solid ${state.isFocused ? "#756E63" : "#262626"}`,
+    boxShadow: "4px 4px 0px 0px #3B3F42",
     ":hover": {
-      border: "2px solid #3D4143",
+      border: `2px solid ${state.isFocused ? "#3B3F42" : "#262626"}`,
       boxShadow: "none",
     },
   }),
-  option: (styles) => ({
-    ...styles,
-    color: "#C7C3BD",
+  option: (base, state) => ({
+    ...base,
+    color: "#FFFFFF",
     fontSize: "0.8rem",
     lineHeight: "1.75rem",
     width: "100%",
-    background: "#181A1B",
+    background: state.isSelected ? "#3D4143" : "#262626",
     ":hover": {
-      backgroundColor: "#C7C3BD",
+      backgroundColor: "#3B3F42",
       color: "#000",
       cursor: "pointer",
     },
   }),
-  menu: (styles) => ({
-    ...styles,
-    backgroundColor: "#C7C3BD",
+  menu: (base) => ({
+    ...base,
+    backgroundColor: "#3B3F42",
     maxWidth: "14rem",
-    border: "2px solid #3D4143",
+    border: "2px solid #3B3F42",
     borderRadius: "5px",
     boxShadow: "5px 5px 0px 0px rgba(0, 0, 0, 0)",
   }),
-  placeholder: (defaultStyles) => ({
-    ...defaultStyles,
+  placeholder: (base) => ({
+    ...base,
     color: "#F3F4F6",
     fontSize: "0.8rem",
     lineHeight: "1.75rem",

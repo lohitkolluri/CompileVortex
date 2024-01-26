@@ -1,39 +1,21 @@
 import React from "react";
 
 const OutputWindow = ({ outputDetails }) => {
-  const getOutput = () => {
-    let statusId = outputDetails?.status?.id;
+  const renderOutput = () => {
+    const statusId = outputDetails?.status?.id;
+    const decodedCompileOutput = atob(outputDetails?.compile_output);
+    const decodedStdout = atob(outputDetails?.stdout);
+    const decodedStderr = atob(outputDetails?.stderr);
 
-    if (statusId === 6) {
-      // Compilation error
-      return (
-        <pre className="px-2 py-1 font-normal text-xs text-red-500">
-          {atob(outputDetails?.compile_output)}
-        </pre>
-      );
-    } else if (statusId === 3) {
-      // Successful output
-      return (
-        <pre className="px-2 py-1 font-normal text-xs" style={{ color: "#CCC8C3" }}>
-          {atob(outputDetails.stdout) !== null
-            ? `${atob(outputDetails.stdout)}`
-            : null}
-        </pre>
-      );
-    } else if (statusId === 5) {
-      // Time Limit Exceeded
-      return (
-        <pre className="px-2 py-1 font-normal text-xs text-red-500">
-          {`Time Limit Exceeded`}
-        </pre>
-      );
-    } else {
-      // Other cases (e.g., stderr)
-      return (
-        <pre className="px-2 py-1 font-normal text-xs text-red-500">
-          {atob(outputDetails?.stderr)}
-        </pre>
-      );
+    switch (statusId) {
+      case 6: // Compilation error
+        return <pre className="error-output">{decodedCompileOutput}</pre>;
+      case 3: // Successful output
+        return <pre className="success-output">{decodedStdout || null}</pre>;
+      case 5: // Time Limit Exceeded
+        return <pre className="error-output">Time Limit Exceeded</pre>;
+      default: // Other cases (e.g., stderr)
+        return <pre className="error-output">{decodedStderr}</pre>;
     }
   };
 
@@ -41,7 +23,7 @@ const OutputWindow = ({ outputDetails }) => {
     <>
       <h1 className="font-bold text-xl text-white-800 mb-2">Output</h1>
       <div className="w-full h-56 bg-gray-800 rounded-md text-gray-200 font-normal text-sm overflow-y-auto">
-        {outputDetails ? <>{getOutput()}</> : null}
+        {outputDetails && renderOutput()}
       </div>
     </>
   );

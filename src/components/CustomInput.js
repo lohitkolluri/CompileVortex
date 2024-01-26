@@ -7,12 +7,22 @@ const CustomInput = ({ customInput, setCustomInput }) => {
   };
 
   const inputStyles = {
-    backgroundColor: "#181A1B",
+    backgroundColor: "#181A1B", // Dark background color
+    border: "2px solid #D1D5DB",
+    borderRadius: "0.375rem", // Use rem for better scalability
+    boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.1)",
+    padding: "0.5rem 1rem",
+    outline: "none",
+    transition: "box-shadow 0.2s ease-in-out",
+    marginTop: "0.5rem",
+    width: "100%", // Full width
+    boxSizing: "border-box",
+    color: "#e2e8f0", // Light text color
   };
 
   const inputClasses = classnames(
-    "focus:outline-none w-full border-2 border-gray-300 z-10 rounded-md shadow-md px-4 py-2 hover:shadow-lg transition duration-200 mt-2",
-    "bg-white"
+    "focus:outline-none hover:shadow-lg",
+    "bg-[#1E2022]" // Dark background color
   );
 
   return (

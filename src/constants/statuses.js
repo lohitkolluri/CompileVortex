@@ -1,58 +1,23 @@
 export const statuses = [
-  {
-    id: 1,
-    description: "In Queue",
-  },
-  {
-    id: 2,
-    description: "Processing",
-  },
-  {
-    id: 3,
-    description: "Accepted",
-  },
-  {
-    id: 4,
-    description: "Wrong Answer",
-  },
-  {
-    id: 5,
-    description: "Time Limit Exceeded",
-  },
-  {
-    id: 6,
-    description: "Compilation Error",
-  },
-  {
-    id: 7,
-    description: "Runtime Error (SIGSEGV)",
-  },
-  {
-    id: 8,
-    description: "Runtime Error (SIGXFSZ)",
-  },
-  {
-    id: 9,
-    description: "Runtime Error (SIGFPE)",
-  },
-  {
-    id: 10,
-    description: "Runtime Error (SIGABRT)",
-  },
-  {
-    id: 11,
-    description: "Runtime Error (NZEC)",
-  },
-  {
-    id: 12,
-    description: "Runtime Error (Other)",
-  },
-  {
-    id: 13,
-    description: "Internal Error",
-  },
-  {
-    id: 14,
-    description: "Exec Format Error",
-  },
+  createStatus(1, "In Queue"),
+  createStatus(2, "Processing"),
+  createStatus(3, "Accepted"),
+  createStatus(4, "Wrong Answer"),
+  createStatus(5, "Time Limit Exceeded"),
+  createStatus(6, "Compilation Error"),
+  createStatus(7, "Runtime Error (SIGSEGV)"),
+  createStatus(8, "Runtime Error (SIGXFSZ)"),
+  createStatus(9, "Runtime Error (SIGFPE)"),
+  createStatus(10, "Runtime Error (SIGABRT)"),
+  createStatus(11, "Runtime Error (NZEC)"),
+  createStatus(12, "Runtime Error (Other)"),
+  createStatus(13, "Internal Error"),
+  createStatus(14, "Exec Format Error"),
 ];
+
+function createStatus(id, description) {
+  return {
+    id,
+    description,
+  };
+}

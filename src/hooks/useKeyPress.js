@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 
 const useKeyPress = function (targetKey) {
   const [keyPressed, setKeyPressed] = useState(false);
 
-  function downHandler({ key }) {
+  const downHandler = ({ key }) => {
     if (key === targetKey) {
       setKeyPressed(true);
     }
-  }
+  };
 
   const upHandler = ({ key }) => {
     if (key === targetKey) {
@@ -15,7 +15,7 @@ const useKeyPress = function (targetKey) {
     }
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.addEventListener("keydown", downHandler);
     document.addEventListener("keyup", upHandler);
 
@@ -23,7 +23,7 @@ const useKeyPress = function (targetKey) {
       document.removeEventListener("keydown", downHandler);
       document.removeEventListener("keyup", upHandler);
     };
-  });
+  }, [targetKey]); // added dependency
 
   return keyPressed;
 };

@@ -200,10 +200,10 @@ const Landing = () => {
               disabled={!code}
               className={classnames(
                 "mt-4 border-2",
-                "border-[#8A8275]", // Updated border color
+                "border-[#8A8275]",
                 "border-black z-10 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200",
                 !code ? "opacity-50" : "",
-                "bg-[#181A1B]" // Updated background color
+                "bg-[#181A1B] text-[#C7C3BD] focus:outline-none"
               )}
             >
               {processing ? "Processing..." : "Compile and Execute"}
