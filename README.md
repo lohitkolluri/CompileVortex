@@ -5,7 +5,7 @@
 
 <h2>🚀 Demo</h2>
 
-Explore the capabilities of CompileVortex at [https://code.lohitkolluri.tech](https://code.lohitkolluri.tech)
+Explore the capabilities of CompileVortex at [https://compile-vortex.vercel.app](https://compile-vortex.vercel.app)
 
 <h2>🧐 Features</h2>
 
