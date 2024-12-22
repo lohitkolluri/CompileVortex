@@ -1,67 +1,126 @@
+<div align="center">
 
-<h1 align="center" id="title">CompileVortex</h1>
+![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=CompileVortex&fontSize=80&animation=fadeIn&fontAlignY=35)
 
-<p id="description">CompileVortex is a powerful web-based code editor that empowers you to compile and run your code in over 40 programming languages. Customize your coding environment with ease by choosing from a selection of available themes.</p>
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#demo">Demo</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#tech-stack">Tech Stack</a>
+</p>
 
-<h2>🚀 Demo</h2>
+[![GitHub license](https://img.shields.io/github/license/lohitkolluri/CompileVortex?style=flat-square)](LICENSE)
+[![Website](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fcompile-vortex.vercel.app)](https://compile-vortex.vercel.app)
+[![Made with React](https://img.shields.io/badge/Made%20with-React-61DAFB?style=flat-square&logo=react)](https://reactjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 
-Explore the capabilities of CompileVortex at [https://compile-vortex.vercel.app](https://compile-vortex.vercel.app)
+<p align="center">A powerful web-based code editor that enables you to compile and run code in over 40 programming languages. Features a customizable environment with multiple themes for an enhanced coding experience. ✨</p>
 
-<h2>🧐 Features</h2>
+</div>
 
-Here are some of the project's standout features:
+## ✨ Features
 
-- Supports 40+ programming languages.
-- Custom input support.
-- Multiple themes for a personalized coding experience.
+<div align="center">
 
-<h2>🛠️ Installation Steps:</h2>
+```mermaid
+mindmap
+  root((CompileVortex))
+    Code Execution
+      40+ Languages Support
+      Custom Input
+      Real-time Compilation
+    User Interface
+      Multiple Themes
+      Monaco Editor Integration
+      Responsive Design
+    Technical Features
+      React Integration
+      TypeScript Support
+      API Integration
+    Development
+      Local Setup
+      RapidAPI Integration
+      Environment Configuration
+```
 
-Follow these steps to get CompileVortex up and running on your local machine:
+</div>
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/lohitkolluri/CompileVortex
-   ```
+## 🚀 Demo
+Experience CompileVortex live at [https://compile-vortex.vercel.app](https://compile-vortex.vercel.app)
 
-2. **Navigate to the project directory:**
-   ```bash
-   cd CompileVortex
-   ```
+## 🛠️ Installation
 
-3. **Install dependencies:**
-   ```bash
-   yarn # or npm install
-   ```
+1️⃣ Clone the repository:
+```bash
+git clone https://github.com/lohitkolluri/CompileVortex
+```
 
-4. **Obtain RapidAPI Keys:**
-   - Register on [RapidAPI](https://rapidapi.com/judge0-official/api/judge0-ce/pricing) and obtain your API keys.
+2️⃣ Navigate to project directory:
+```bash
+cd CompileVortex
+```
 
-5. **Create a `.env` file:**
-   - Add API keys to the `.env` file.
+3️⃣ Install dependencies:
+```bash
+yarn # or npm install
+```
 
-6. **Run the project:**
-   ```bash
-   yarn start # or npm start
-   ```
+4️⃣ Configure API:
+- Register on [RapidAPI](https://rapidapi.com/judge0-official/api/judge0-ce/pricing)
+- Create `.env` file and add API keys
 
-7. **Open in your browser:**
-   Visit [http://localhost:3000](http://localhost:3000)
+5️⃣ Run development server:
+```bash
+yarn start # or npm start
+```
 
-<h2>💻 Built with</h2>
+6️⃣ Open in browser:
+- Visit [http://localhost:3000](http://localhost:3000)
 
-CompileVortex leverages the following technologies:
+## 💻 Tech Stack
 
-- React.js
-- TypeScript
-- Axios
-- Tailwind CSS
-- Monaco Editor
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
+      <br>React
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
+      <br>TypeScript
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind" />
+      <br>Tailwind
+    </td>
+    <td align="center" width="96">
+      <img src="https://user-images.githubusercontent.com/2723376/55211710-2f76e000-5228-11e9-887b-67faca78c4b9.png" width="48" height="48" alt="Monaco" />
+      <br>Monaco
+    </td>
+  </tr>
+</table>
 
-<h2>🛡️ License:</h2>
+## ⚡ Core Features
 
-This project is licensed under the [MIT License](LICENSE)
+- 🌐 Language Support
+  - Over 40 programming languages
+  - Real-time compilation
+  - Custom input capabilities
+- 🎨 Editor Features
+  - Multiple theme options
+  - Monaco Editor integration
+  - Syntax highlighting
+- 💻 Development
+  - Easy local setup
+  - RapidAPI integration
+  - Environment configuration
 
-<h2>📝 License</h2>
+## 📄 License
 
-This project is licensed under the [MIT License](LICENSE)
+<div align="center">
+
+MIT License © [Lohit Kolluri](LICENSE)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
+
+</div>
