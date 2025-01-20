@@ -2290,12 +2290,10 @@
   dependencies:
     "@types/react" "^17"
 
-"@types/react-dom@^18.0.3":
-  version "18.0.3"
-  resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.0.3.tgz"
-  integrity sha512-1RRW9kst+67gveJRYPxGmVy8eVJ05O43hg77G2j5m76/RFJtMbcfAs2viQ2UNsvvDg8F7OfQZx8qQcl6ymygaQ==
-  dependencies:
-    "@types/react" "*"
+"@types/react-dom@^18.3.5":
+  version "18.3.5"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.3.5.tgz#45f9f87398c5dcea085b715c58ddcf1faf65f716"
+  integrity sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==
 
 "@types/react-transition-group@^4.4.0":
   version "4.4.4"
