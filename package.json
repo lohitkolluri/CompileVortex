@@ -4,7 +4,7 @@
     "@babel/core": "^7.23.2",
     "@babel/plugin-syntax-flow": "^7.26.0",
     "@babel/plugin-transform-react-jsx": "^7.14.9",
-    "@monaco-editor/react": "^4.4.4",
+    "@monaco-editor/react": "^4.6.0",
     "@testing-library/dom": "^7.21.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.2",
