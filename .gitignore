@@ -66,3 +66,17 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+.env
+.env.*
+!.env.example
+!.env.deploy.example
+
+# Terraform
+terraform/.env
+terraform/.env.*
+terraform/terraform.tfstate*
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfplan
+terraform/*.tfplan

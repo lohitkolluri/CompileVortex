@@ -33,7 +33,7 @@ const Footer = () => {
           <img src={githubLogoUrl} alt="GitHub Logo" style={logoStyles} />
         </a>
         <a
-          href="https://lohitkolluri.tech"
+          href="https://lohit.is-a.dev"
           target="_blank"
           rel="noopener noreferrer"
           className="mx-1"
